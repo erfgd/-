@@ -39,7 +39,16 @@ class Window(QMainWindow):
         self.button_clear.setFont(custom_font)
 
     def import_function():
-        # код здесь писать (а лучше сразу создать новый .py файл и написать эту функцию там)
+        from tkinter import *
+ 
+        root = Tk()
+        root.title("Бригада №2") 
+        root.geometry("300x250")
+ 
+        btn = Button(text="Import", background="#825", foreground="#ccc", padx="20", pady="8", font="16")
+        btn.pack()
+ 
+        root.mainloop()# код здесь писать (а лучше сразу создать новый .py файл и написать эту функцию там)
         # функция должна позволять челам загружать .pdf файл (типо открывается проводник и там выбираешь файл)
         pass
 
