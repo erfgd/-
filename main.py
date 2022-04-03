@@ -1,6 +1,9 @@
 import sys
-from PyQt5 import QtGui, QtWidgets, uic, QtCore
+
+from PyQt5 import QtGui, QtWidgets, QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow
+
+
 
 class Window(QMainWindow):
 
@@ -12,6 +15,7 @@ class Window(QMainWindow):
         custom_font.setPointSize(10)
 
         self.setWindowTitle("Table Extraction")
+        self.setWindowIcon(QtGui.QIcon('icon.png'))
         self.setGeometry(640, 480, 640, 480)
         self.line = QtWidgets.QGroupBox(self)
         self.line.setGeometry(QtCore.QRect(0, 0, 1920, 40))
@@ -31,6 +35,7 @@ class Window(QMainWindow):
         self.button_export.setGeometry(160, 0, 80, 40)
         self.button_export.setText("Export")
         self.button_export.setFont(custom_font)
+        self.button_import.clicked.connect(self.export_function)
 
         self.button_clear = QtWidgets.QPushButton(self)
         self.button_clear.setGeometry(560, 400, 40, 40)
@@ -38,18 +43,10 @@ class Window(QMainWindow):
         self.button_clear.setText("X")
         self.button_clear.setFont(custom_font)
 
-    def import_function():
-        from tkinter import *
- 
-        root = Tk()
-        root.title("Бригада №2") 
-        root.geometry("300x250")
- 
-        btn = Button(text="Import", background="#825", foreground="#ccc", padx="20", pady="8", font="16")
-        btn.pack()
- 
-        root.mainloop()# код здесь писать (а лучше сразу создать новый .py файл и написать эту функцию там)
-        # функция должна позволять челам загружать .pdf файл (типо открывается проводник и там выбираешь файл)
+    def import_function(self):
+        pass
+
+    def export_function(self):
         pass
 
 def application():
