@@ -6,3 +6,4 @@
 * task 2 remake: basic gui - WIP
 * task 3 remake: import button - rvprikhodko [x]
 * task 4: preview button - rvprikhodko WIP
+* task 5: camelot read function - apdoronkina WIP
