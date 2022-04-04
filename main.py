@@ -4,7 +4,7 @@ from PyQt5 import QtGui, QtWidgets, QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 
 from functions.export_fucntion import export_func
-from functions.preview_function import preview_func
+from functions.preview_function import preview_func, PDFPreview
 
 class Window(QMainWindow):
 
@@ -54,6 +54,8 @@ class Window(QMainWindow):
 
     def preview_function(self):
         preview_func(filename)
+        pdf = PDFPreview()
+        pdf.show()
 
 def application():
     app = QApplication(sys.argv)
