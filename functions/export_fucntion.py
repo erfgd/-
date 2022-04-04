@@ -1,2 +1,2 @@
-def export_func(self):
-    pass
+def export_func(filename):
+    print(filename)
