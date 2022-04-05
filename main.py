@@ -1,10 +1,26 @@
 import sys
 
 from PyQt5 import QtGui, QtWidgets, QtCore
-from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QWidget
+from PyQt5.QtWebEngineWidgets import QWebEngineSettings, QWebEngineView
+from PyQt5.QtCore import QUrl
 
 from functions.export_fucntion import export_func
-from functions.preview_function import preview_func, PDFPreview
+
+
+class PDFPreview(QMainWindow):
+    def __init__(self):
+        super(PDFPreview, self).__init__()
+
+        self.setWindowTitle("PDF Viewer")
+        self.setGeometry(0, 28, 1000, 750)
+        self.centralWidget = QWidget(self)
+
+        self.webView = QWebEngineView()
+        self.webView.settings().setAttribute(QWebEngineSettings.PluginsEnabled, True)
+        self.webView.settings().setAttribute(QWebEngineSettings.PdfViewerEnabled, True)
+        self.webView.setUrl(QUrl(filename))
+        self.setCentralWidget(self.webView)
 
 class Window(QMainWindow):
 
@@ -53,9 +69,8 @@ class Window(QMainWindow):
         export_func(filename)
 
     def preview_function(self):
-        preview_func(filename)
-        pdf = PDFPreview()
-        pdf.show()
+        self.pdf = PDFPreview()
+        self.pdf.show()
 
 def application():
     app = QApplication(sys.argv)
