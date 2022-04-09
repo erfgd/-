@@ -1,5 +1,7 @@
 import camelot
+
 # Для Анечки
+
 def camelot_func(filename):
     tables = camelot.read_pdf(filename, pages = '1, 2-end', process_background = True)
     tables
