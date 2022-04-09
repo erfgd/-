@@ -10,7 +10,7 @@ def camelot_func(filename):
     while i <= 9:
         tables[i]
         tables[i].parsing_report
-        tables[i].to_csv('filename.csv')
+        tables[i].to_csv(f'filename{i}.csv')
         tables[i].df
         i = i + 1
         
