@@ -5,8 +5,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QWidget
 from PyQt5.QtWebEngineWidgets import QWebEngineSettings, QWebEngineView
 from PyQt5.QtCore import QUrl
 
-from functions.export_fucntion import ExportGui, filename_catch
-
+from functions.export_fucntion import filename_catch, ExportGui
 
 
 class PDFPreview(QMainWindow):
