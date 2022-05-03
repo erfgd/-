@@ -53,8 +53,7 @@
 Кнопка *«Export»* предлагает пользователювыбрать удобную библиотеку для изъятия табличных данных из предоставленного *pdf* файла. 
 ### После ее нажатия появятся две кнопки: 
 
-1.	![image](https://user-images.githubusercontent.com/100873734/166369976-476c0690-0fc4-455f-a2a2-56096b8b96d7.png)                                 
-2. ![image](https://user-images.githubusercontent.com/100873734/166370992-eaf2708d-7020-46f9-a087-c132a58eb441.png)
+![image](https://user-images.githubusercontent.com/100873734/166369976-476c0690-0fc4-455f-a2a2-56096b8b96d7.png)                                 ![image](https://user-images.githubusercontent.com/100873734/166370992-eaf2708d-7020-46f9-a087-c132a58eb441.png)
                   
 
  Библиотека tabula-py лучше подходит для извлчения простых таблиц, в то время как camelot-py имеет большую вариативность настроек, которые позволяют лучше выделить «сложную» таблицу.
