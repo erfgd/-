@@ -25,11 +25,15 @@
 ### Инструкция перед ПЕРВЫМ запуском программы:
 Пользователю необходимо открыть cmd – командную строку и установить необходимые библиотеки.
 
-cd..
-pip install camelot-py
-pip install tabula-py
-pip3 install pyqt5
-pip install PyQt5-tools
+*cd..*
+
+*pip install camelot-py*
+
+*pip install tabula-py*
+
+*pip3 install pyqt5*
+
+*pip install PyQt5-tools*
 
 Теперь пользователь может запустить программу, чтобы приступить к работе после запуска программы нажмите кнопку *«Import»* и выберите *pdf* файл. В противном случае кнопка *«Import»* не сработает.
 ### Для каждого запуска: 
