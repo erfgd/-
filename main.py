@@ -34,7 +34,7 @@ class PDFHelp(QMainWindow):
         self.webView = QWebEngineView()
         self.webView.settings().setAttribute(QWebEngineSettings.PluginsEnabled, True)
         self.webView.settings().setAttribute(QWebEngineSettings.PdfViewerEnabled, True)
-        self.webView.setUrl(QUrl(filename))
+        self.webView.setUrl(QUrl('Help.pdf'))
         self.setCentralWidget(self.webView)
 
 
