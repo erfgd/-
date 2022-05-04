@@ -21,6 +21,21 @@ class PDFPreview(QMainWindow):
         self.webView.settings().setAttribute(QWebEngineSettings.PdfViewerEnabled, True)
         self.webView.setUrl(QUrl(filename))
         self.setCentralWidget(self.webView)
+        
+class PDFHelp(QMainWindow):
+    def __init__(self):
+        super(PDFHelp, self).__init__()
+        
+        self.setWindowTitle("PDF Help")
+        self.setGeometry(0, 28, 1000, 750)
+        self.centralWidget = QWidget(self)
+
+        
+        self.webView = QWebEngineView()
+        self.webView.settings().setAttribute(QWebEngineSettings.PluginsEnabled, True)
+        self.webView.settings().setAttribute(QWebEngineSettings.PdfViewerEnabled, True)
+        self.webView.setUrl(QUrl(filename))
+        self.setCentralWidget(self.webView)
 
 
 class Window(QMainWindow):
@@ -76,6 +91,7 @@ class Window(QMainWindow):
             filename_catch(filename)
             self.button_export.clicked.connect(self.export_function)
             self.button_preview.clicked.connect(self.preview_function)
+            self.button_help.clicked.connect(self.help_function)
             self.button_export.setStyleSheet("background-color: lightgreen")
             self.button_preview.setStyleSheet("background-color: lightgreen")
 
@@ -86,6 +102,10 @@ class Window(QMainWindow):
     def preview_function(self):
         self.pdf = PDFPreview()
         self.pdf.show()
+        
+    def help_function(self):
+        self.help = PDFHelp()
+        self.help.show()
 
 
 def application():
